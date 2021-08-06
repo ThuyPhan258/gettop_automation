@@ -32,3 +32,4 @@ class SearchResults(Page):
         self.wait_for_element_appear(*self.SEARCH_ICON)
 
 
+

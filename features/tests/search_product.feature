@@ -19,3 +19,4 @@ Feature: Test search product functionality
     When Input Coke in search field
     And Click Enter
     Then Verify the text "No products found" displays in product page
+
