@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 from behave import given, when, then
 from time import sleep
@@ -9,22 +11,27 @@ from selenium.webdriver.common.keys import Keys
 @when('Hover on Mac product category')
 def hover_Mac_category(context):
     context.app.top_nav_bar_page.hover_Mac_category()
+    time.sleep(2)
 
 @when('Hover on Iphone product category')
 def hover_Iphone_category(context):
     context.app.top_nav_bar_page.hover_Iphone_category()
+    time.sleep(2)
 
 @when('Hover on Ipad product category')
 def hover_Ipad_category(context):
     context.app.top_nav_bar_page.hover_Ipad_category()
+    time.sleep(2)
 
 @when('Hover on Watch product category')
 def hover_Watch_category(context):
     context.app.top_nav_bar_page.hover_Watch_category()
+    time.sleep(2)
 
 @when('Hover on Accessories product category')
 def hover_Accessories_category(context):
     context.app.top_nav_bar_page.hover_Accesories_category()
+    time.sleep(2)
 
 @when('Select the first product')
 def select_first_product(context):

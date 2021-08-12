@@ -12,35 +12,27 @@ class TopNav(Page):
     PRODUCT_OPTIONS = (By.CSS_SELECTOR, ".menu-item.current-dropdown ul.sub-menu li")
     PRODUCT_TITLE = (By.CSS_SELECTOR, ".product-info .product-title")
 
-    def hover_Mac_category(self):
-        mac = self.find_element(*self.MAC_CATEGORY)
+
+    def hover_product_category(self, product_type):
+        category = self.find_element(*product_type)
         actions = ActionChains(self.driver)
-        actions.move_to_element(mac)
+        actions.move_to_element(category)
         actions.perform()
+
+    def hover_Mac_category(self):
+        self.hover_product_category(self.MAC_CATEGORY)
 
     def hover_Iphone_category(self):
-        iphone = self.find_element(*self.IPHONE_CATEGORY)
-        actions = ActionChains(self.driver)
-        actions.move_to_element(iphone)
-        actions.perform()
+        self.hover_product_category(self.IPHONE_CATEGORY)
 
     def hover_Ipad_category(self):
-        ipad = self.find_element(*self.IPAD_CATEGORY)
-        actions = ActionChains(self.driver)
-        actions.move_to_element(ipad)
-        actions.perform()
+        self.hover_product_category(self.IPAD_CATEGORY)
 
     def hover_Watch_category(self):
-        watch = self.find_element(*self.WATCH_CATEGORY)
-        actions = ActionChains(self.driver)
-        actions.move_to_element(watch)
-        actions.perform()
+        self.hover_product_category(self.WATCH_CATEGORY)
 
     def hover_Accesories_category(self):
-        accessories = self.find_element(*self.ACCESSORIES_CATEGORY)
-        actions = ActionChains(self.driver)
-        actions.move_to_element(accessories)
-        actions.perform()
+        self.hover_product_category(self.ACCESSORIES_CATEGORY)
 
     def select_first_product(self):
         e = self.find_elements(*self.PRODUCT_OPTIONS)
