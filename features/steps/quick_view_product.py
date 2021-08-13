@@ -43,7 +43,6 @@ def click_dot_page(context, page_number):
 @then('Verify product image of page {page_number} displays')
 def verify_product_image(context, page_number):
     slide = context.driver.find_element(By.XPATH, "//div[@class='product-quick-view-container']//div[@class='flickity-slider']//div[contains(@class,'slide')][" + page_number + "]")
-
     assert 'is-selected' in slide.get_attribute("class").split(), f'Error product image is not correct'
 
 

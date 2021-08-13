@@ -41,16 +41,9 @@ def reset_min_filter(context):
     max_reset = context.driver.find_element(By.XPATH, "//aside[@id='woocommerce_layered_nav_filters-10']//li[1]//a[1]").click()
     time.sleep(2)
 
-# @when('Click Reset Max Filter')
-# def reset_max_filter(context):
-#     max_reset = context.driver.find_element(By.XPATH, "//aside[@id='woocommerce_layered_nav_filters-10']//li[1]//a[1]").click()
-#     time.sleep(2)
-
 def to_money(value):
     dollar = value.replace("$", "").replace(",", "")
-    print('the value is:', dollar)
     return float(dollar)
-
 
 @then('Verify list of products')
 def verify_product_list(context):
