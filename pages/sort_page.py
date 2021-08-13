@@ -107,9 +107,3 @@ class Sort(Page):
         test_price_list.sort(reverse=True)
         assert test_price_list == prices_list, "Sort error"
 
-
-
-
-
-
-

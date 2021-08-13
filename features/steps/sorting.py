@@ -64,4 +64,3 @@ def verify_product_display_dsc_order(context):
 def verify_sort_by_high_to_low_is_presented(context, option_text):
     actual = context.driver.find_element(By.CSS_SELECTOR, ".woocommerce-ordering select option[selected]").text
     assert actual == option_text, f'Expected {option_text}, but got {actual}'
-
