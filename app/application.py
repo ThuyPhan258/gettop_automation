@@ -1,6 +1,7 @@
 from pages.main_page import Main
 from pages.search_results_page import SearchResults
 from pages.top_nav_bar_page import TopNav
+from pages.sort_page import Sort
 
 class Application():
 
@@ -9,3 +10,4 @@ class Application():
         self.main_page = Main(self.driver)
         self.search_results_page = SearchResults(self.driver)
         self.top_nav_bar_page = TopNav(self.driver)
+        self.sort_page = Sort(self.driver)
