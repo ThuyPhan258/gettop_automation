@@ -54,7 +54,7 @@ def verify_product_list(context):
 
     for price_element in prices:
         price = to_money(price_element.text)
-        if price < min_price_range or price > max_price_range:
-            print("The product out of price range")
+        assert price < min_price_range or price > max_price_range, f'The product out of price range'
+
 
 

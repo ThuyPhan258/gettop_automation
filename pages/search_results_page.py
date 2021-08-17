@@ -21,7 +21,6 @@ class SearchResults(Page):
     def input_search(self, search_word):
         self.input_text(search_word, *self.SEARCH_FIELD)
 
-
     def click_search(self):
         self.click(*self.SEARCH_ICON)
 
